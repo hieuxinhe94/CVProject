@@ -13,9 +13,20 @@ import glob
 
 # ho tro nhap thu muc o day 
 print "nhap thu muc chua du lieu "
-_dir = "/home/pvh/Documents/GITHUB/data/"
+       # = "/home/pvh/Documents/GITHUB/data/"
+
+def input_target():
+           print   '** /computer/project/github/data/ \n'
+           _dir =    raw_input(" Nhập đường dẩn đến thư mục chứa dử liệu \n ")
+           with open('setup.txt','a') as s:
+                        s.write(""+_dir)
+                        s.close()                
+           return _dir 
+          
+_dir = input_target() 
 _dir_en = _dir+"en/"
 _dir_vi = _dir+ "vi/"
+
 
 class user:
         root = _dir
@@ -60,12 +71,12 @@ def convert_to_text_and_and_move_field():
                
                 
                 if lan == "vi":   
-                        shutil.copy(_dir+lists[2][_i]  + "",_dir_vi + lists[2][_i] +"")             
+                        shutil.remove(_dir+lists[2][_i]  + "",_dir_vi + lists[2][_i] +"")             
                 if lan == "en":
-                        shutil.copy(_dir+lists[2][_i]  + "",_dir_en + lists[2][_i] +"")                      
+                        shutil.remove(_dir+lists[2][_i]  + "",_dir_en + lists[2][_i] +"")                      
                 else :
                         print 'done or the language not of english , vietnames with doc^^'
-                # neu ma tieng anh thi remove no den floder tieng anh , neu tieng bviet thi move no den tieng viet
+                
                 
                 _i+=1
       #  print '\tHave %s doc file ' %(str(_i))        

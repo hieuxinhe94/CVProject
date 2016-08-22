@@ -12,21 +12,30 @@ import prettytable
 
 
 print '=========== Buoc 1 : Tim kiem toan bo tep tin can trich xuat  trong floder ======='
-_dir = "/home/pvh/Documents/Python/textract/en/"
 import glob, os
+
+def get_dir():
+        with open('setup.txt','r') as d:
+                        _dir = d.readline().replace('\n', '')
+                        return _dir                
+
+print get_dir()
+_dir = "" + get_dir()+"en/"
+#_dir = "/home/pvh/Documents/Python/textract/en/"
+
 os.chdir(_dir)
 lists = [{},{},{},{},{}]
 i,j,k,t=0,0,0,0
 for file in glob.glob("*.txt"):
     lists[1][i] = str(file)
     i +=1
-print "txt: %s"  %str((lists[1]))
+#print "txt: %s"  %str((lists[1]))
 # i+1 is length of lists[1] or use len(lists[1])
 
 for file in glob.glob("*.doc"):
     lists[2][j]=str(file)
     j+=1
-print  "doc : %s " %(str(lists[2]))    
+#print  "doc : %s " %(str(lists[2]))    
 # j+1 is length of lists[2]
 
 print ' *** pdf is disabled to test'
@@ -35,7 +44,7 @@ for file in glob.glob("*.pdf"):
     lists[3][k]=str(file)
     k +=1
 '''    
-print "pdf : %s"  %(str(lists[3]))
+#print "pdf : %s"  %(str(lists[3]))
 
 # k+1 is length of lists[3]
 ############################################################################################################################
@@ -52,7 +61,7 @@ def convert_to_text_to_process():
                 lists[2][_i] = (textract.process(_dir+lists[2][_i])).decode('utf-8') #.lower()
                
                 _i+=1
-        print _i 
+ #       print _i 
         '''       
         _j=i
         for _j in range(_i,len(lists[3])+_i,1) :                    # .pdf
@@ -64,8 +73,8 @@ def convert_to_text_to_process():
 convert_to_text_to_process()
 
         
-print 'Process successful'
-print   len(lists[2])       
+print 'Process successful '
+print 'detect : %s'  %str(len(lists[2]))       
 
 print '=============End of format  Convert to text(str)======='
 _text_lists_convert2 = lists[2]
@@ -75,7 +84,7 @@ _text_lists_convert1 = lists[1]
 
 ############################################################################################################################
 #   Key Tag
-#               ***          Can chuyen long Tag thanh mang len(long_tag) hang , va max len(short tag cot)
+#           
 # Tung TAG nen co cach trich xua khac nhau 
 # Profile thi tim tu khoa roi lay dong do
 # Skill thi lay toan bo doan do 
@@ -174,8 +183,6 @@ result_6 = [[None]*(len(TAG[5] )) for i in range(len(_text_lists_convert2))]
 
 # Tao ra 7 cai result hay tao 1 cai chua ca 7 ?  
 # De quet tat ca cac vung lan luot , them vong for lon nhat vafo va bien k, dic..[i][k] ? NO! =(
-
-print ' TEst \n'
 
 def find_date (result_x,x):
        for i in range(0,len(_text_lists_convert2),1):          # quet tung tep , i la stt tep

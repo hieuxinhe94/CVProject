@@ -10,11 +10,18 @@ import textract
 import codecs
 import prettytable
 
-
+import glob, os
 
 print '=========== Buoc 1 : Tim kiem toan bo tep tin can trich xuat  trong floder ======='
-_dir = "/home/pvh/Documents/Python/textract/vi/"
-import glob, os
+
+def get_dir():
+        with open('setup.txt','r') as d:
+                        _dir = d.readline().replace('\n', '')
+                        return _dir                
+
+print get_dir()
+_dir = "" + get_dir()+"vi/"
+
 os.chdir(_dir)
 lists = [{},{},{},{},{}]
 i,j,k,t=0,0,0,0
