@@ -13,16 +13,10 @@ import prettytable
 
 print '=========== Buoc 1 : Tim kiem toan bo tep tin can trich xuat  trong floder ======='
 import glob, os
-
-def get_dir():
-        with open('setup.txt','r') as d:
-                        _dir = d.readline().replace('\n', '')
-                        return _dir                
-
-print get_dir()
-_dir = "" + get_dir()+"en/"
-#_dir = "/home/pvh/Documents/Python/textract/en/"
-
+path = os.getcwd()
+_dir = "" + path.replace("/vi","/en/")
+#_dir = ""
+print _dir
 os.chdir(_dir)
 lists = [{},{},{},{},{}]
 i,j,k,t=0,0,0,0
@@ -73,10 +67,7 @@ def convert_to_text_to_process():
 convert_to_text_to_process()
 
         
-print 'Process successful '
-print 'detect : %s'  %str(len(lists[2]))       
 
-print '=============End of format  Convert to text(str)======='
 _text_lists_convert2 = lists[2]
 _text_lists_convert1 = lists[1]
 
@@ -93,7 +84,7 @@ _text_lists_convert1 = lists[1]
 # 
 ############################################################################################################################
 
-print '=============Buoc 3 : Nhap tu khoa va Tag ======='
+# print '=============Buoc 3 : Nhap tu khoa va Tag ======='
 dict_keys_en_Tag_short_profile = ["full name","date of birth","status","gender","nationality","street","adress","country","email","e-mail","phone","mobile","fax","relocation"]
 dict_keys_en_Tag_short_Objective= ["Objective"]     #mong muon      # Neu ko can thiet lam thi co the lay ca doan do
 dict_keys_en_Tag_short_Education = ["university","street","school","coleage"]
@@ -132,11 +123,11 @@ def find_partion():
                                           
                    print " Total line CV : %s" %(str(_i))
                    dict_keys_en_long_tag[i][6] = (_i)
-        print ' ==> \n'
-        print " Partion of CV " 
+        #print ' ==> \n'
+        #print " Partion of CV " 
 
 find_partion()
-print 'Test Pdf -----------------------------'
+#print 'Test Pdf -----------------------------'
 def test_pdf():
          for i in range(0,len(_text_lists_convert3),1) :     
                    # chay lan luot cac tep da chuyen kieu doc sang 
@@ -165,14 +156,13 @@ t =  PrettyTable(dict_keys_en_Tag_long)
 for i in range(0,len(_text_lists_convert2),1):
         t.add_row(dict_keys_en_long_tag[i])
 print t
-print '\n  \t ***Process success \n'       
      
 ############################################################################################################################
 # Buoc 4-*
 # Tim cac tu khoa nho hon , thuoc tung phan, quet tung vung nho :
 #      ***
 ############################################################################################################################
-print '\n \t \t Quet lan luot cac mini tag trong long tag va luu vao result 1'
+# print '\n \t \t Quet lan luot cac mini tag trong long tag va luu vao result 1'
 
 result_1 = [[None]*(len(TAG[0] )) for i in range(len(_text_lists_convert2))]
 result_2 = [[None]*(len(TAG[1] )) for i in range(len(_text_lists_convert2))]
@@ -201,7 +191,7 @@ def find_tag_education():
                                                        # print line
                                                         result_3[i][key] = ""
                                                         result_3[i][key] += (line.strip()).encode("ascii", "ignore")
-        print "find Education"                
+ #       print "find Education"                
                         
                         
 def find_tag_profile():
@@ -211,7 +201,7 @@ def find_tag_profile():
                                                 if TAG[0][key] in line:
                                                        # print line
                                                         result_1[i][key] = line.strip().replace(TAG[0][key]or":","").encode("utf-8").replace(":", "").strip()              
-	print " find profile : \n"
+#	print " find profile : \n"
 
 def find_tag_skill():
         for i in range(0,len(_text_lists_convert2),1):          # quet tung tep , i la stt tep
@@ -219,7 +209,7 @@ def find_tag_skill():
                 for line in  _text_lists_convert2[i].lower().splitlines()[dict_keys_en_long_tag[i][4]:dict_keys_en_long_tag[i][5]-1]:
                                    	             
 	                        result_5[i][0] += (str(line)+"\n").encode("ascii", "ignore")
-	print 'find skills '
+#	print 'find skills '
 
 def find_tag_exprience():
      for i in range(0,len(_text_lists_convert2),1):          # quet tung tep , i la stt tep4
@@ -228,14 +218,14 @@ def find_tag_exprience():
                        if '19' or '20' in line :
                                 result_4[i][0] += (line.strip() + "\n").encode("ascii", "ignore")
                         
-     print 'find exprience'
+ #    print 'find exprience'
 def find_tag_interest():
               for i in range(0,len(_text_lists_convert2),1):          # quet tung tep , i la stt tep
                    result_6[i][0] =""
                    for line in _text_lists_convert2[i].lower().splitlines()[dict_keys_en_long_tag[i][5]:dict_keys_en_long_tag[i][6]]:
                                
                                 result_6[i][0] += (line.strip() + "\n").encode("ascii", "ignore")
-              print 'find interest'
+#              print 'find interest'
 def find_objective():
         for i in range(0,len(_text_lists_convert2),1):
                 result_2[i][0] = ""
@@ -316,7 +306,7 @@ print '\n===Write excels Success ==================\n'
 ############################################################################################################################
 
 print '\t \n '
-print '\t\t\t\t\t\t\t\t\t \b ALL  OUT PUT \t \n'
+print '\t\t\t\t\t\t\t\write ouput \t \n'
 '''
 arr = TAG[0]+TAG[1]+TAG[2]+TAG[3]+TAG[4]+TAG[5]
 print arr

@@ -4,6 +4,8 @@
 ####                            Pvh Developer
 ####                               create 8-8-2016                 working good with .doc  file
 ############################################################################################################################ 
+import time 
+_start_time = time.time()
 print '================ TRÍCH XUẤT VĂN BẢN : (CV XIN VIỆC) ================================= '
 print " \t\t\t TÁC GIẢ : PHAM VAN HIẾU \n"
 print "email : hieuxinhe94@gmail.com \n"
@@ -15,16 +17,25 @@ print '*** chương trình có sử dụng các moduln mả nguồn mở của p
 print 'Các bước cốt lỏi  chính của chương trình như sau : '
 
 print 'di chuyển tất cả các file của các ngôn ngử khác nhau về từng floder riêng .'
-
+def input_target():
+           print   '** /computer/project/github/data/ \n'
+           _dir =    raw_input(" Nhập đường dẩn đến thư mục chứa dử liệu :  ")
+           with open('setup.txt','w') as s:
+                        s.write(""+_dir)
+                        s.close()                
+           return _dir 
+          
+input_target() 
+# Tam thoi lay luon du lieu trong thu muc chuong trinh 
 import nhan_biet_ngonngu
 print 'done! '
 print "\n  chay từng tệp tin nhận dạng riêng cho mổi loại ngôn ngử gồm : \n  - chuyển kiểu docx,doc,pdf,images thành kiểu text (txt) \n - chia nhỏ từng vùng sau khi nhận biết được tiêu đề cũa từng phần  \n - nhận dạng vùng đó và tìm các từ khóa phù hợp \n - Lấy các dòng có từ khóa hoặc chế biến theo từng thuật toán ,yêu cầu  riêng \n -Tạo bảng trực quan trên màn hình terminal,cmd ,... \n -Ghi dử liệu đó thành từng bảng,cột tương ứng \n -Xuất ra file excel,csv ,txt ... tùy chọn \n \t\t\t Kết thúc  "
 
-print '\n \t Xử lí cv tiếng anh ....'
-import function_en
-
-print "\n\n \t Xử lí cv tiếng việt ...."
+print '\n \t Xử lí cv tiếng việt  ....'
 import function_vi
+
+print "\n\n \t Xử lí cv tiếng anh  ...."
+import function_en
 
 
 
@@ -38,4 +49,4 @@ print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Done~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ "
 #@END OF PROCESS              
 ################                Building Successful                             
 ##                                      pvh  
-
+print 'time : %s' %str(time.time() - _start_time)

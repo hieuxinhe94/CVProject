@@ -11,19 +11,18 @@ import shutil
 import os 
 import glob
 
+path = os.getcwd()
+print path
 # ho tro nhap thu muc o day 
-print "nhap thu muc chua du lieu "
-       # = "/home/pvh/Documents/GITHUB/data/"
-
-def input_target():
-           print   '** /computer/project/github/data/ \n'
-           _dir =    raw_input(" Nhập đường dẩn đến thư mục chứa dử liệu \n ")
-           with open('setup.txt','a') as s:
-                        s.write(""+_dir)
-                        s.close()                
-           return _dir 
-          
-_dir = input_target() 
+def get_dir():
+              with open('setup.txt','r') as d:
+                        _dir_ = d.readline().replace('\n', '')
+                        #d.close() 
+                        return _dir_
+                                       
+       
+_dir = ""
+_dir = get_dir()
 _dir_en = _dir+"en/"
 _dir_vi = _dir+ "vi/"
 
@@ -71,9 +70,9 @@ def convert_to_text_and_and_move_field():
                
                 
                 if lan == "vi":   
-                        shutil.remove(_dir+lists[2][_i]  + "",_dir_vi + lists[2][_i] +"")             
+                        shutil.copy(_dir+lists[2][_i]  + "",_dir_vi + lists[2][_i] +"")             
                 if lan == "en":
-                        shutil.remove(_dir+lists[2][_i]  + "",_dir_en + lists[2][_i] +"")                      
+                        shutil.copy(_dir+lists[2][_i]  + "",_dir_en + lists[2][_i] +"")                      
                 else :
                         print 'done or the language not of english , vietnames with doc^^'
                 

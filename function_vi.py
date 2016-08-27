@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # -*- coding: ascii -*-
-#@START 
+#  @START 
 ####                            Pvh Developer
 ####                               create 18-8-2016                 working good with .doc  file
 ############################################################################################################################ 
@@ -13,14 +13,11 @@ import prettytable
 import glob, os
 
 print '=========== Buoc 1 : Tim kiem toan bo tep tin can trich xuat  trong floder ======='
-
-def get_dir():
-        with open('setup.txt','r') as d:
-                        _dir = d.readline().replace('\n', '')
-                        return _dir                
-
-print get_dir()
-_dir = "" + get_dir()+"vi/"
+path = os.getcwd()
+                      
+                                        
+_dir = ""
+_dir = "" + path+"/vi/"
 
 os.chdir(_dir)
 lists = [{},{},{},{},{}]
@@ -54,20 +51,18 @@ import textract
 
 
 def convert_to_text_to_process():
-       
+     
         for _i in range(0,len(lists[2]) ,1) :                   # .doc
                 lists[2][_i] = (textract.process(_dir+lists[2][_i])).decode('utf-8')
                
                 _i+=1
         print _i        
-        
+       
 convert_to_text_to_process()
 
         
-print 'Process successful'
-print   len(lists[2])       
 
-print '=============End of format  Convert to text(str)======='
+
 _text_lists_convert2 = lists[2]
 _text_lists_convert1 = lists[1]
 
@@ -84,7 +79,7 @@ _text_lists_convert1 = lists[1]
 # 
 ############################################################################################################################
 
-print '=============Buoc 3 : Nhap tu khoa va Tag ======='
+# print '=============Buoc 3 : Nhap tu khoa va Tag ======='
 dict_keys_en_Tag_short_profile = [u"họ & tên",u"giới tính",u"ngày sinh",u"nơi sinh",u"chiều cao",u"cân nặng",u"tình trạng hôn nhân",u"tôn giáo",u"quốc tịch",u"số cmnd",u"địa chỉ thường trú",u"đt",u"email",u"địa chỉ"]
 
 dict_keys_en_Tag_short_Objective= [u"Nguyện vọng"]                     # Neu ko can thiet lam thi co the lay ca doan do
@@ -121,14 +116,14 @@ def find_partion():
                                _i +=1
                                for key in range(0,len(dict_keys_en_Tag_long),1):
                                             if dict_keys_en_Tag_long[key -1] in line :
-                                                          print line 
+                                                       #   print line 
                                                           dict_keys_en_long_tag[i][key-1] = (_i)
                                                           
                                           
                    print " Total line CV : %s" %(str(_i))
                    dict_keys_en_long_tag[i][5] = _i 
-        print ' ==> \n'
-        print " Partion of CV " 
+       # print ' ==> \n'
+       # print " Partion of CV " 
 
 find_partion()
 print 'Test Pdf -----------------------------'
@@ -145,7 +140,7 @@ def test_pdf():
                                           
                    print " Total line CV : %s" %(str(_i))
                    
-         print ' ==> \n '
+       #  print ' ==> \n '
 
 #test_pdf()
 
@@ -160,14 +155,14 @@ t =  PrettyTable(dict_keys_en_Tag_long)
 for i in range(0,len(_text_lists_convert2),1):
         t.add_row(dict_keys_en_long_tag[i])
 print t
-print '\n  \t ***Process success \n'       
+      
      
 ############################################################################################################################
 # Buoc 4-*
 # Tim cac tu khoa nho hon , thuoc tung phan, quet tung vung nho :
 #      ***
 ############################################################################################################################
-print '\n \t \t Quet lan luot cac mini tag trong long tag va luu vao result 1'
+# print '\n \t \t Quet lan luot cac mini tag trong long tag va luu vao result 1'
 
 result_1 = [[("").encode("utf-8")]*(len(TAG[0] )) for i in range(len(_text_lists_convert2))]
 result_2 = [[None]*(len(TAG[1] )) for i in range(len(_text_lists_convert2))]
@@ -179,7 +174,7 @@ result_6 = [[None]*(len(TAG[5] )) for i in range(len(_text_lists_convert2))]
 # Tao ra 7 cai result hay tao 1 cai chua ca 7 ?  
 # De quet tat ca cac vung lan luot , them vong for lon nhat vafo va bien k, dic..[i][k] ? NO! =(
 
-print ' TEst \n'
+
 
 def find_date (result_x,x):
        for i in range(0,len(_text_lists_convert2),1):          # quet tung tep , i la stt tep
@@ -197,9 +192,9 @@ def find_tag(result_x,x):
 	        for line in  _text_lists_convert2[i].splitlines()[dict_keys_en_long_tag[i][x-1]:dict_keys_en_long_tag[i][x]]:
                                  for key in range(0,len(TAG[x-1] ),1):
                                                 if TAG[x-1][key] in line:
-                                                        print line
+                                                       # print line
                                                         result_x[i][key] = line.strip().replace(TAG[x-1][key],"").encode("utf-8")              
-	print " findding : \n"
+	# print " findding : \n"
 	
 	#return result_x
 # profile  tim theo kieu tim tag thi hop ly , con education , exeprience thi nen tim theo kieu tim ngay thang (/) con skill thi ngat theo dong ,doan 
@@ -212,7 +207,7 @@ def tim_tag_thongtincanhan():
                                                        # print line
                                                         result_1[i][key] = line.strip().replace(TAG[0][key]or":","").encode("utf-8").replace(":", "").strip()
                                                                 
-	print " find profile : \n"
+	#print " find profile : \n"
 
 def tim_tag_kynang():
         for i in range(0,len(_text_lists_convert2),1):          # quet tung tep , i la stt tep
@@ -220,7 +215,7 @@ def tim_tag_kynang():
                 for line in  _text_lists_convert2[i].lower().splitlines()[dict_keys_en_long_tag[i][4]:dict_keys_en_long_tag[i][5]-1]:
                                    	             
 	                        result_5[i][0] += line.strip().encode("utf-8").replace(":", "").strip() + "\n"
-	print 'find skills '
+	#print 'find skills '
 
 def tim_tag_kinhnghiem():
      for i in range(0,len(_text_lists_convert2),1):          # quet tung tep , i la stt tep4
@@ -229,14 +224,14 @@ def tim_tag_kinhnghiem():
                        if '19' or '20' in line :
                                 result_4[i][0] += line.strip().encode("utf-8").replace(":", "").strip()+ "\n"
                         
-     print 'find exprience'
+    # print 'find exprience'
 def tim_tag_sothich():
               for i in range(0,len(_text_lists_convert2),1):          # quet tung tep , i la stt tep
                    result_6[i][0] = ""
                    for line in _text_lists_convert2[i].lower().splitlines()[dict_keys_en_long_tag[i][5]:dict_keys_en_long_tag[i][6]]:
                                
                                 result_6[i][0] += line.strip().encode("utf-8").replace(":", "").strip()
-              print 'find interest'
+     #         print 'find interest'
 def tim_tag_nguyenvong():
         for i in range(0,len(_text_lists_convert2),1):
                 result_3[i][0] = ""
@@ -250,7 +245,7 @@ def tim_tag_giaoduc():
                                                        # print line
                                                         
                                                         result_2[i][key] = line.strip().encode("utf-8").replace(":", "").strip()
-        print "find Education"                
+      #  print "find Education"                
                         
                     
 tim_tag_thongtincanhan()
@@ -329,20 +324,7 @@ print '\n===========Success ==================\n'
 # return Json type:             Buoc 6
 ############################################################################################################################
 
-print '\t \n '
-print '\t\t\t\t\t\t\t\t\t \b ALL  OUT PUT \t \n'
-'''
-arr = TAG[0]+TAG[1]+TAG[2]+TAG[3]+TAG[4]
-print arr
-m = PrettyTable(arr)
-for i in range(0,len(_text_lists_convert2),1):
-               m.add_row(result_1[i]+result_2[i]+result_3[i]+result_4[i]+result_5[i])
-print m
 
-teext = m.get_string()
-with open ('text_tbl.txt', 'a') as _file:            # ko ghi de ,ghi de a= w
-                _file.write(teext)
-'''
 def write_excel_all(out_file):
         arr = result_1+result_2+result_3+result_4+result_5+ result_6            # wrong!
         k = (TAG)

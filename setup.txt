@@ -1,1 +1,1 @@
-/home/pvh/Documents/GITHUB/data/
+/home/pvh/Documents/Python/textract/
