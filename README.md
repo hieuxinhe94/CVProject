@@ -2,7 +2,7 @@
                         Tác Giả : PHẠM VĂN HIẾU 
                         email : hieuxinhe94@gmail.com
                         github/hieuxinhe94/CVProject
-                        
+               Ý Tưởng : Xử lí khối lượng lớn tệp tin và với thời gian nhanh nhất có thể  
 ![alt tag](https://github.com/hieuxinhe94/CVProject/blob/master/www.GIFCreator.me_wrmxFi.gif)
 
 
@@ -41,18 +41,17 @@
 
 
 
-Numpy : Thư viện xử lý toán học phức tạp để nhận biết ngôn ngử có một số yêu cầu phức tạp :                 
-Chương trình hoạt động tốt trên nên tảng Linux và Mac OSX ,                                     
- sudo apt-get install python-numpy  
+Numpy : Thư viện xử lý toán học phức tạp để nhận biết ngôn ngử có một số yêu cầu phức tạp :                               
+Chương trình hoạt động tốt trên nên tảng Linux và Mac OSX ,                                           
+ sudo apt-get install python-numpy                                                    
  <Vì numpy là 1 gói mạnh mẻ và khá lớn và cũng rất hữu dụng  nên tôi đả không đưa thẳng vào source>
-Windows sẻ phức tạp hơn rất nhiều vì một số gói mà  cài đặt không tương thích so với nền tảng unix .
-<Các hệ thống tính toán dử liệu lớn thường không sử dụng windows>
-  pip install numpy
-  pip install chardet
+Windows sẻ phức tạp hơn rất nhiều vì một số gói mà  cài đặt không tương thích so với nền tảng unix .      
+<Các hệ thống tính toán dử liệu lớn thường không sử dụng windows>                             
+  pip install numpy                                                                 
+  pip install chardet                                                                   
   ....
-  Tôi thừa nhận là không chắc chắn để chương trình chạy tốt trên windows trong nhiều trường hợp 
-
-
+******************************** CHƯƠNG TRÌNH KHÔNG HOẠT ĐỘNG TỐT  TRÊN WINDOWS  *******************
+*************************         VÀ KHÔNG THỂ KHẮC PHỤC NÓ                 ******************************
 
 
 
