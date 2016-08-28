@@ -2,7 +2,8 @@
                         Tác Giả : PHẠM VĂN HIẾU 
                         email : hieuxinhe94@gmail.com
                         github/hieuxinhe94/CVProject
-               Ý Tưởng : Xử lí khối lượng lớn tệp tin và với thời gian nhanh nhất có thể  
+               Ý Tưởng : Xử lí khối lượng lớn tệp tin và với thời gian nhanh nhất có thể            
+               ** Chương trình đả được kiểm thử với xử lý 100 tệp CV chỉ trong 6s**
 ![alt tag](https://github.com/hieuxinhe94/CVProject/blob/master/www.GIFCreator.me_wrmxFi.gif)
 
 
@@ -13,7 +14,7 @@
         4. pretty table : Hiển thị giao diện trực tiếp các bảng dử liệu trên thiết bị đầu cuối 
         5. các gói : Shultil , goslate , ... 
         
-                ** Chương trình đả được kiểm thử với xử lý 100 tệp CV chỉ trong 3s
+                
 
 
 
