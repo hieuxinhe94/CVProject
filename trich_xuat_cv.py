@@ -18,7 +18,7 @@ print 'Các bước cốt lỏi  chính của chương trình như sau : '
 
 print 'di chuyển tất cả các file của các ngôn ngử khác nhau về từng floder riêng .'
 def input_target():
-           print   '** /computer/project/github/data/ \n'
+           print   '**Warning :   /computer/project/github/data/  \n'
            _dir =    raw_input(" Nhập đường dẩn đến thư mục chứa dử liệu :  ")
            with open('setup.txt','w') as s:
                         s.write(""+_dir)

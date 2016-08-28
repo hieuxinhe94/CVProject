@@ -6,17 +6,18 @@
 ![alt tag](https://github.com/hieuxinhe94/CVProject/blob/master/www.GIFCreator.me_wrmxFi.gif)
 
 
-
                 ** Chương trình có sử dụng các moduln mả nguồn mở như :
         1. Textract : Xử lí văn bản từ nhiều định dạng sang kiểu text 
         2. Langid   : Nhận biết 9 loại ngôn ngử tự nhiên 
-        3. pretty table : Hiển thị giao diện trực tiếp các bảng dử liệu trên thiết bị đầu cuối 
-        4. các gói : Shultil , goslate , ... 
+        3.  Numpy   : git clone http://github.com/numpy/numpy.git numpy 
+        4. pretty table : Hiển thị giao diện trực tiếp các bảng dử liệu trên thiết bị đầu cuối 
+        5. các gói : Shultil , goslate , ... 
+        
+                ** Chương trình đả được kiểm thử với xử lý 100 tệp CV chỉ trong 3s
 
 
 
-
-                    Quy trình thực thi chính của phần mềm  như sau :
+                  **  Quy trình thực thi chính của phần mềm  như sau :
 
     I. Nhận biết ngôn ngử :
         0.Nhập vào địa chỉ thư mục chứa dử liệu , chương trình sẻ lưu lại ở setup.txt
@@ -40,6 +41,18 @@
 
 
 
+Numpy : Thư viện xử lý toán học phức tạp để nhận biết ngôn ngử có một số yêu cầu phức tạp :                 
+Chương trình hoạt động tốt trên nên tảng Linux và Mac OSX ,                                     
+ sudo apt-get install python-numpy  
+ <Vì numpy là 1 gói mạnh mẻ và khá lớn và cũng rất hữu dụng  nên tôi đả không đưa thẳng vào source>
+Windows sẻ phức tạp hơn rất nhiều vì một số gói mà  cài đặt không tương thích so với nền tảng unix .
+<Các hệ thống tính toán dử liệu lớn thường không sử dụng windows>
+  pip install numpy
+  pip install chardet
+  ....
+  Tôi thừa nhận là không chắc chắn để chương trình chạy tốt trên windows trong nhiều trường hợp 
+
+
 
 
 
@@ -51,5 +64,8 @@
         
         
         
+                        
+                
+
                         
                 
