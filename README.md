@@ -4,7 +4,9 @@
                         github/hieuxinhe94/CVProject
                Ý Tưởng : Xử lí khối lượng lớn tệp tin và với thời gian nhanh nhất có thể            
                ** Chương trình đả được kiểm thử với xử lý 100 tệp CV chỉ trong 6s**
-![alt tag](https://github.com/hieuxinhe94/CVProject/blob/master/www.GIFCreator.me_wrmxFi.gif)
+            (Yêu cầu : cài đặt gói python  numpy  :  sudo apt-get install python-numpy )
+
+![alt tag](https://github.com/hieuxinhe94/CVProject/blob/master/fghjk.gif)
 
 
                 ** Chương trình có sử dụng các moduln mả nguồn mở như :
