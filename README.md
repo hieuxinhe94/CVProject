@@ -4,14 +4,15 @@
                         github/hieuxinhe94/CVProject
                Ý Tưởng : Xử lí khối lượng lớn tệp tin và với thời gian nhanh nhất có thể            
                ** Chương trình đả được kiểm thử với xử lý 100 tệp CV chỉ trong 6s**
-            (Yêu cầu : cài đặt gói python  numpy  :  sudo apt-get install python-numpy )
+            (Yêu cầu : cài đặt gói python  numpy  :  sudo apt-get install python-numpy
+            python 2.7 trở lên )
 
 ![alt tag](https://github.com/hieuxinhe94/CVProject/blob/master/fghjk.gif)
 
 
                 ** Chương trình có sử dụng các moduln mả nguồn mở như :
         1. Textract : Xử lí văn bản từ nhiều định dạng sang kiểu text 
-        2. Langid   : Nhận biết 9 loại ngôn ngử tự nhiên 
+        2. Langid   : Nhận biết 97 loại ngôn ngử tự nhiên 
         3.  Numpy   : git clone http://github.com/numpy/numpy.git numpy 
         4. pretty table : Hiển thị giao diện trực tiếp các bảng dử liệu trên thiết bị đầu cuối 
         5. các gói : Shultil , goslate , ... 
@@ -46,12 +47,7 @@
 
 Numpy : Thư viện xử lý toán học phức tạp để nhận biết ngôn ngử có một số yêu cầu phức tạp :                               
 Chương trình hoạt động tốt trên nên tảng Linux và Mac OSX ,                                           
- sudo apt-get install python-numpy                                                    
- <Vì numpy là 1 gói mạnh mẻ và khá lớn và cũng rất hữu dụng  nên tôi đả không đưa thẳng vào source>
-Windows sẻ phức tạp hơn rất nhiều vì một số gói mà  cài đặt không tương thích so với nền tảng unix .      
-<Các hệ thống tính toán dử liệu lớn thường không sử dụng windows>                             
-  pip install numpy                                                                 
-  pip install chardet                                                                   
+                                                                 
   ....
 ******************************** CHƯƠNG TRÌNH KHÔNG HOẠT ĐỘNG TỐT  TRÊN WINDOWS  *******************
 *************************         VÀ KHÔNG THỂ KHẮC PHỤC NÓ                 ******************************
