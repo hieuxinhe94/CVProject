@@ -8,7 +8,7 @@
             python 2.7 trở lên )
 
 
-Biên Dịch và chạy chương trình : 
+Biên Dịch và chạy chương trình :                                                                      
       1.  git clone https://github.com/hieuxinhe94/CVPrọect.git                                                   
       2. Open  Terminarl ,...  and go to CVProject Floder                                                           
       3. Enter : python trichxuatcv.py                                                                                
