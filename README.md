@@ -9,13 +9,13 @@
 
 
 Biên Dịch và chạy chương trình : 
-      1.  git clone https://github.com/hieuxinhe94/CVPrọect.git
-      2. Open  Terminarl ,...  and go to CVProject Floder 
-      3. Enter : python trichxuatcv.py 
-      4. Enter path to data floder : 
-        ex: (/home/user/Documents/CVProject/data/) Đường dẩn đến thư mục chứa các file cv 
-      5. finish : Mở thư mục chứa data vừa rồi và xem kết quả ở các file cvs,txt được tạo ra 
-        hoặc cũng có thể quan sát trực tiếp trên thiết bị đầu cuối 
+      1.  git clone https://github.com/hieuxinhe94/CVPrọect.git                                                   
+      2. Open  Terminarl ,...  and go to CVProject Floder                                                           
+      3. Enter : python trichxuatcv.py                                                                                
+      4. Enter path to data floder :                                                                                  
+        ex: (/home/user/Documents/CVProject/data/) Đường dẩn đến thư mục chứa các file cv                                 
+      5. finish : Mở thư mục chứa data vừa rồi và xem kết quả ở các file cvs,txt được tạo ra                            
+        hoặc cũng có thể quan sát trực tiếp trên thiết bị đầu cuối                                  
       
       
       
