@@ -4,14 +4,16 @@
                         github/hieuxinhe94/CVProject
                Ý Tưởng : Xử lí khối lượng lớn tệp tin và với thời gian nhanh nhất có thể            
                ** Chương trình đả được kiểm thử với xử lý 100 tệp CV chỉ trong 6s**
-            (Yêu cầu : cài đặt gói python  numpy  :  sudo apt-get install python-numpy
-            python 2.7 trở lên )
-
+            (Yêu cầu : 
+            cài đặt gói python  numpy  :  sudo apt-get install python-numpy
+            và  python 2.7  )
+<       CHƯƠNG TRÌNH KHÔNG THỂ CHẠY TRÊN WINDOWS VÌ CÁC MOLDUN : textract,numppy KHÔNG THỂ CHẠY TỐT Ở NỀN TẢNG NÀY  >               
+<                         CÓ THỂ CHẠY TRÊN TẤT CẢ CÁC NỀN TẢNG UNIX , MAC , DESBIAN                             >                 
 
 Biên Dịch và chạy chương trình :                                                                      
-      1.  git clone https://github.com/hieuxinhe94/CVPrọect.git                                                   
+      1.  git clone https://github.com/hieuxinhe94/CVProject.git                                                   
       2. Open  Terminarl ,...  and go to CVProject Floder                                                           
-      3. Enter : python trichxuatcv.py                                                                                
+      3. Enter : python trich_xuat_cv.py                                                                                
       4. Enter path to data floder :                                                                                  
         ex: (/home/user/Documents/CVProject/data/) Đường dẩn đến thư mục chứa các file cv                                 
       5. finish : Mở thư mục chứa data vừa rồi và xem kết quả ở các file cvs,txt được tạo ra                            
@@ -60,7 +62,7 @@ Biên Dịch và chạy chương trình :
 
 
 ******************************** CHƯƠNG TRÌNH KHÔNG HOẠT ĐỘNG TỐT  TRÊN WINDOWS  *******************
-*************************         VÀ KHÔNG THỂ KHẮC PHỤC NÓ                 ******************************
+*************************               VÀ KHÔNG THỂ KHẮC PHỤC NÓ                 ******************************
 
 
 
