@@ -33,7 +33,9 @@ Biên Dịch và chạy chương trình :
         5. các gói : Shultil , goslate , ... 
         
                 
-
+                
+  ![alt tag](https://github.com/hieuxinhe94/CVProject/blob/master/result_en.png)
+  ![alt tag](https://github.com/hieuxinhe94/CVProject/blob/master/result_vi.png)
 
 
                   **  Quy trình thực thi chính của phần mềm  như sau :
