@@ -8,7 +8,7 @@
             cài đặt gói python  numpy  :  sudo apt-get install python-numpy
             và  python 2.7  )
 <       CHƯƠNG TRÌNH KHÔNG THỂ CHẠY TRÊN WINDOWS VÌ CÁC MOLDUN : textract,numppy KHÔNG THỂ CHẠY TỐT Ở NỀN TẢNG NÀY  >               
-<                         CÓ THỂ CHẠY TRÊN TẤT CẢ CÁC NỀN TẢNG UNIX , MAC , DESBIAN                             >                 
+<                         CÓ THỂ CHẠY TRÊN TẤT CẢ CÁC NỀN TẢNG NHÂN UNIX , MAC , DEBIAN  , UBUNTU , CENT OS , ...                            >                 
 
 Biên Dịch và chạy chương trình :                                                                      
       1.  git clone https://github.com/hieuxinhe94/CVProject.git                                                   
